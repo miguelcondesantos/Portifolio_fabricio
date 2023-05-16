@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='normalize.css')}}">
+    <script src="https://kit.fontawesome.com/62baf433a6.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body class="body">
+    <input type="checkbox" id="check">
+    <label for="check">
+    <i class="fas fa-bars" id="btn"></i>
+    <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar">
+        <h2>Contatos</h2>
+        <a href="https://www.linkedin.com/in/miguel-conde-santos-a67313271/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/miguelcondesantos" target="_blank">Github</a>
+        <a href="mailto:miguelconde121004@gmail.com">miguelconde121004@gmail.com</a>
+    </div>
+
+    {% if not is_home%}
+        <div class="divlinks">
+            <a href="/">Home</a> <span>|</span>
+            <a href="{% if is_interesses %} /projetos {% elif is_informacoeseducacionais %} /projetos {% else %} /interesses {% endif %}">
+                {% if is_interesses %} Projetos {% elif is_informacoeseducacionais %} Projetos {% else %} Interesses {% endif %}</a> <span>|</span>
+            <a href="{% if is_informacoeseducacionais%} /interesses {% else %} /informacoeseducacionais {% endif %}">
+                {% if is_informacoeseducacionais %} Interesses {% else %} Informações Educacionais {% endif %}</a> 
+        </div>
+    {% endif %}
+</body>
+{% block content %}{% endblock %}
+</html>

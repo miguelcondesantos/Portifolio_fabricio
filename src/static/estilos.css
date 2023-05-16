@@ -1,0 +1,517 @@
+/* >>>>>>>>>>>>>>>>BASE.html<<<<<<<<<<<<<<<<<<<< */
+.body{
+    background-color: #44A9A8;
+}
+
+.sidebar{
+    position: fixed;
+    left: -20%;
+    width: 20%;
+    height: 100%;
+    background-color: #f7e5a2;
+    transition: all 0.5s ease;
+    border-radius: 9%;
+
+}
+
+.sidebar h2{
+    color: #260d0d;
+    text-align: center;
+    font-size: 300%;
+    font-weight: 500;
+    user-select: none;
+    background-color: #f0aa55;
+    border-radius: 19%;
+}
+
+
+.sidebar a{
+    color: #260d0d;
+    display: block;
+    height: 8%;
+    line-height: 250%;
+    font-size: 130%;
+    text-align: center;
+    border-bottom: 4px solid #651511;
+    border-top: 4px solid #651511;
+    border-left: 10px solid transparent;
+    box-sizing: border-box;
+    font-weight: bold;
+
+}
+
+.sidebar a:hover, a.activate{
+    border-left: 10px solid #ff4000;
+    color: #ff4000;
+}
+
+#check{
+    display: none;
+}
+
+label #btn, label #cancel{
+    position: absolute;
+    cursor: pointer;
+    background-color: #f18f17;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    color: #000000;
+    font-size: 29px;
+    border-radius: 5px;
+    margin: 9px 30px;
+    transition: all .5s ease;
+    border: 1px solid #f18f17;
+
+}
+
+label #cancel{
+    opacity: 0;
+    visibility: hidden;
+
+}
+
+#check:checked ~ label #btn{
+    margin-left: 21%;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#check:checked ~ label #cancel{
+    margin-left: 21%;
+    opacity: 1;
+    visibility: visible;
+}
+
+#check:checked ~ .sidebar{
+    left: 0;
+}
+
+@media (max-width: 860px){
+
+    label #btn, label #cancel{
+        margin: 15px;
+    }
+
+    #check:checked ~ label #btn{
+        margin-left: 32%;
+    }
+
+    #check:checked ~ label #cancel{
+        margin-left: 32%;
+    }
+
+    .sidebar{
+        height: auto;
+        width: 30%;
+        left: -30%;
+        transition: all .5s ease;
+    }
+
+    .sidebar h2{
+        font-size: 200%;
+    }
+
+    .sidebar a{
+        font-size: 87%;
+        box-sizing: border-box;
+    }
+
+}
+
+.divlinks{
+    background-color: #f0aa55;
+    width: 100%;
+    height: 72px;
+    font-size: 34px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.divlinks a{
+    display: flex;
+    flex-direction: row;
+    margin-right: 2px;
+    margin-top: 15px;
+}
+
+.divlinks a:hover{
+    color: #924bb7;
+}
+
+.divlinks span{
+    margin-top: 15px;
+}
+/* >>>>>>>>>>>>>>>>BASE.html<<<<<<<<<<<<<<<<<<<< */
+
+
+/* >>>>>>>>>>>>>>>>HOME.html<<<<<<<<<<<<<<<<<<<< */
+.headerhome{
+    background-color: #ffefb5;
+    height: 260px;
+    width: 100%;
+    display: flex;
+
+}
+
+.headerhome span{
+    color: #ff4000;
+    padding-top: 7%;
+    margin-left: 5%;
+    font-size: 150%;
+    text-align: center;
+
+}
+
+.headerhome span strong {
+    font-size: 200%;
+}
+
+#img{
+    opacity: 1;
+    margin-left: auto;
+    margin-right: auto;
+    border-top-left-radius: 170px;
+    border-top-right-radius: 170px;
+    border-bottom-left-radius: 170px;
+    border-bottom-right-radius: 170px;
+    overflow: hidden;
+    display: flex;
+    
+}
+
+.links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 400%;
+}
+
+.links a{
+    margin-left: 10%;
+    margin-right: 15%;
+    margin-top: 15%;
+    border: 5px solid #a02411;
+    background-color: #FFEFB5;
+    color: #a84131;
+    transition: filter 0.3 transform 0.3s ease;
+    box-shadow: 5px 15px 40px #033130;
+    text-align: center;
+}
+
+.links a:hover{
+    filter: brightness(107%);
+    color: #c42c15;
+    transform: scale(1.2);
+}
+
+
+.link-central {
+    position: absolute;
+    top: 5.6%;
+    left: 29%;
+    font-size: 150%;
+}
+/* >>>>>>>>>>>>>>>>HOME.html<<<<<<<<<<<<<<<<<<<< */
+
+
+/* >>>>>>>>>>>>>>>>PROJETOS.html<<<<<<<<<<<<<<<<<<<< */
+.div-git{
+    border: 1px solid #a02411;
+    display: flex;
+    overflow: hidden;
+    height: 145px;
+    width: 490px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ffffff;
+}
+
+.div-git img{
+    display: flex;
+    object-fit: contain;
+    margin-left: 300px;
+    margin-top: 1px;
+    height: 100%;
+    border-radius: 50%;
+    transition: width 2s, height 2s, transform 2s;
+    transition: transform 1s ease;
+}
+
+
+.div-git img:hover{
+    transform: scale(1.2) rotate(360deg);
+}
+
+.div-git span{
+    position: absolute;
+    margin-top: 24px;
+    margin-left: 13px;
+    font-size: 29px;
+    font-weight: bold;
+    color: #a02411;
+    text-align: center;
+    animation: div-git 25s infinite;
+}
+
+@keyframes div-git{
+    0%{color: #000000;}
+    50%{color: #ff6f00;}
+    100%{color: #000000;}
+
+}
+
+.div-projetos{
+    border: 3px solid #0ca6a4;
+    background-color: #168180;
+    height: 30%;
+    width: 40%;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    box-shadow: 1px 4px 26px 15px #0c4746;
+    justify-content: space-between;
+    overflow: auto;
+}
+
+.div-projetos h3{
+    text-align: center;
+    font-weight: 900;
+    font-size: 55px;
+    color: #fff;
+}
+
+.div-projetos p{
+    font-size: 25px;
+    color: #FFFFCC;
+    padding-left: 4px;
+    
+}
+
+/* >>>>>>>>>>>>>>>>PROJETOS.html<<<<<<<<<<<<<<<<<<<< */
+
+
+/* >>>>>>>>>>>>>>>>INFORMACOESEDUCACIONAIS.html<<<<<<<<<<<<<<<<<<<< */
+.div-info1{
+    height: 260px;
+    width: auto;
+
+    display: flex;
+    overflow: hidden;
+    background-color: #48a7a6;
+
+}
+
+.div-info1 img{
+    display: flex;
+}
+
+.div-info1 p{
+    position: absolute;
+    font-size: 20px;
+    margin-left: 270px;
+    color: #ffffff;
+}
+
+.div-info2{
+    height: 260px;
+    width: auto;
+
+    display: flex;
+    overflow: hidden;
+    background-color: #398c89;
+
+}
+
+.div-info2 img{
+    display: flex;
+    width: 260.2px;
+
+}
+
+.div-info2 p{
+    position: absolute;
+    font-size: 20px;
+    margin-left: 270px;
+    color: #ffffff;
+}
+
+.div-info3{
+    height: 260px;
+    width: auto;
+
+    display: flex;
+    overflow: hidden;
+    background-color: #266563;
+
+}
+
+.div-info3 img{
+    display: flex;
+    height: 260px;
+    border-radius: 50%;
+}
+
+.div-info3 p{
+    position: absolute;
+    font-size: 20px;
+    margin-left: 270px;
+    color: #ffffff;
+}
+/* >>>>>>>>>>>>>>>>INFORMACOESEDUCACIONAIS.html<<<<<<<<<<<<<<<<<<<< */
+
+
+/* >>>>>>>>>>>>>>>>INTERESSES.html<<<<<<<<<<<<<<<<<<<< */
+.h1-interesses{
+    display: flex;
+    position: absolute;
+    margin-left: 580px;
+    margin-top: 24px;
+    font-size: 90px;
+}
+
+.hr-pokemon{
+    border-color: #904626;
+    border-width: 4px;
+}
+
+.hr-idiomas{
+    margin-top: 108px;
+    border-color: #904626;
+    border-width: 4px;
+}
+
+.div-pokemonheader{
+    display: flex;
+    width: auto;
+    height: 100px;
+}
+
+.div-pokemonheader img{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    height: 165px;
+    display: flex;
+
+}
+
+.cor1{
+    color: #ff0000;
+}
+.cor2{
+    color: #000000;
+}
+.cor3{
+    color: #ffffff;
+}
+
+.div-pokemon{
+    background-color: #A1D579;
+    border-radius: 20px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 550px;
+    width: 720px;
+}
+
+.div-pokemon p{
+    font-size: 23px;
+    padding-top: 15px;
+    margin-left: 310px;
+    margin-right: 10px;
+    text-align: center;
+
+}
+
+.span-garry{
+    display: flex;
+    position: absolute;
+    height: 195px;
+    margin-top: 80px;
+
+}
+
+.span-squirtle{
+    display: flex;
+    position: absolute;
+    height: 75px;
+    margin-top: 200px;
+    margin-left: 214px;
+}
+
+.pokebola{
+    width: 300px;
+    height: 300px;
+    margin-top: 5px;
+    margin-left: 10px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: white;
+    border: 8px solid black;
+    overflow: hidden;
+}
+  
+.circulo{
+    width: 100%;
+    height: 50%;
+    border-bottom: 9px solid #000000;
+    background-color: red;
+}
+  
+.circulo-medio{
+    width: 35%;
+    height: 35%;
+    background-color: #ffffff;
+    border: 9px solid #000000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+  
+.circulo-pequeno{
+    width: 45px;
+    height: 45px;
+    background-color: #979797;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.idiomas{
+    display: flex;
+    border-radius: 20px;
+    width: 900px;
+    height: 230px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    background-color: #DB877F;
+}
+
+.idiomas p{
+    display: flex;
+    font-size: 20px;
+    font-weight: bolder;
+    text-align: center;
+    margin-right: 350px;
+    position: absolute;
+}
+
+
+/* >>>>>>>>>>>>>>>>INTERESSES.html<<<<<<<<<<<<<<<<<<<< */
+
+
+
+
+
+
+  
