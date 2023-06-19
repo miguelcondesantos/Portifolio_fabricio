@@ -5,12 +5,12 @@
 
 .sidebar{
     position: fixed;
-    left: -20%;
+    left: -70%;
     width: 20%;
     height: 100%;
     background-color: #f7e5a2;
     transition: all 0.5s ease;
-    border-radius: 9%;
+    z-index: 9999;
 
 }
 
@@ -88,40 +88,8 @@ label #cancel{
     left: 0;
 }
 
-@media (max-width: 860px){
-
-    label #btn, label #cancel{
-        margin: 15px;
-    }
-
-    #check:checked ~ label #btn{
-        margin-left: 32%;
-    }
-
-    #check:checked ~ label #cancel{
-        margin-left: 32%;
-    }
-
-    .sidebar{
-        height: auto;
-        width: 30%;
-        left: -30%;
-        transition: all .5s ease;
-    }
-
-    .sidebar h2{
-        font-size: 200%;
-    }
-
-    .sidebar a{
-        font-size: 87%;
-        box-sizing: border-box;
-    }
-
-}
-
 .divlinks{
-    background-color: #f0aa55;
+    background-color: #ffefb5;
     width: 100%;
     height: 72px;
     font-size: 34px;
@@ -135,15 +103,57 @@ label #cancel{
     flex-direction: row;
     margin-right: 2px;
     margin-top: 15px;
+    color: #a84131;
 }
 
 .divlinks a:hover{
-    color: #924bb7;
+    color: #c42c15;
 }
 
 .divlinks span{
     margin-top: 15px;
 }
+
+@media screen and (max-width: 768px){
+
+    label #btn, label #cancel{
+        margin: 15px;
+    }
+
+    #check:checked ~ label #btn{
+        margin-left: 62%;
+    }
+
+    #check:checked ~ label #cancel{
+        margin-left: 62%;
+    }
+
+    .sidebar{
+        height: auto;
+        width: 60%;
+        left: -100%;
+        transition: all .5s ease;
+    }
+
+    .sidebar h2{
+        font-size: 200%;
+    }
+
+    .sidebar a{
+        font-size: 20px;
+        box-sizing: border-box;
+    }
+
+    .divlinks {
+        width: 100%;
+        font-size: 22px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+}
+
 /* >>>>>>>>>>>>>>>>BASE.html<<<<<<<<<<<<<<<<<<<< */
 
 
@@ -158,7 +168,7 @@ label #cancel{
 
 .headerhome span{
     color: #ff4000;
-    padding-top: 7%;
+    padding-top: 75px;
     margin-left: 5%;
     font-size: 150%;
     text-align: center;
@@ -186,17 +196,17 @@ label #cancel{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    font-size: 400%;
+    font-size: 65px;
 }
 
 .links a{
-    margin-left: 10%;
-    margin-right: 15%;
-    margin-top: 15%;
+    margin-left: 145px;
+    margin-right: 265px;
+    margin-top: 230px;
     border: 5px solid #a02411;
     background-color: #FFEFB5;
     color: #a84131;
-    transition: filter 0.3 transform 0.3s ease;
+    transition: filter 0.3s, transform 0.3s ease;
     box-shadow: 5px 15px 40px #033130;
     text-align: center;
 }
@@ -208,18 +218,85 @@ label #cancel{
 }
 
 
-.link-central {
+.link-central{
     position: absolute;
-    top: 5.6%;
-    left: 29%;
-    font-size: 150%;
+    top: 50px;
+    left: 440px;
+    font-size: 100px;
 }
+
+.link-interesses{
+    font-size: 97px;
+    position: absolute;
+    left: 840px;
+}
+
+@media screen and (max-width: 1000px) {
+    .headerhome {
+        height: 200px;
+        width: 100%;
+    }
+    
+    .headerhome span {
+        margin-top: 40px;
+        margin-left: 65px;
+        font-size: 20px;
+        position: absolute;
+    }
+    
+    .headerhome span strong {
+        font-size: 200%;
+    }
+    
+    #img {
+        opacity: 1;
+        margin-left: auto;
+        margin-right: auto;
+        border-top-left-radius: 170px;
+        border-top-right-radius: 170px;
+        border-bottom-left-radius: 170px;
+        border-bottom-right-radius: 170px;
+        overflow: hidden;
+        display: flex;
+    }
+
+    .links {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 50px;
+        margin: 70px;
+    }
+
+    .links a {
+        flex-direction: column;
+        margin: -171px;
+        margin-top: 180px;
+        width: 300px;
+    }
+
+
+    .link-central {
+        position: relative;
+        top: -340px;
+        left: 0px;
+        font-size: 80px;
+    }
+
+    .link-interesses{
+        position: relative;
+        left: 0px;
+        font-size: 70px;
+    }
+}
+
+
+
 /* >>>>>>>>>>>>>>>>HOME.html<<<<<<<<<<<<<<<<<<<< */
 
 
 /* >>>>>>>>>>>>>>>>PROJETOS.html<<<<<<<<<<<<<<<<<<<< */
 .div-git{
-    border: 1px solid #a02411;
     display: flex;
     overflow: hidden;
     height: 145px;
@@ -227,6 +304,7 @@ label #cancel{
     margin-left: auto;
     margin-right: auto;
     background-color: #ffffff;
+    border-radius: 40px;    
 }
 
 .div-git img{
@@ -253,14 +331,13 @@ label #cancel{
     font-weight: bold;
     color: #a02411;
     text-align: center;
-    animation: div-git 25s infinite;
+    animation: div-git 5s infinite;
 }
 
 @keyframes div-git{
-    0%{color: #000000;}
-    50%{color: #ff6f00;}
-    100%{color: #000000;}
-
+    0%{color: #6e6e6e;}
+    50%{color: #000000;}
+    100%{color: #6e6e6e;}
 }
 
 .div-projetos{
@@ -274,21 +351,50 @@ label #cancel{
     border-radius: 20px;
     box-shadow: 1px 4px 26px 15px #0c4746;
     justify-content: space-between;
-    overflow: auto;
+    overflow: hidden;
 }
 
 .div-projetos h3{
     text-align: center;
     font-weight: 900;
     font-size: 55px;
-    color: #fff;
+    color: #ffffff;
 }
 
 .div-projetos p{
     font-size: 25px;
-    color: #FFFFCC;
+    color: #FFFFFF;
     padding-left: 4px;
     
+}
+
+@media screen and (max-width: 768px) {
+    .div-git{
+        height: 140px;
+        width: 400px;   
+    }
+
+    .div-git img{
+        margin-top: 5px;
+        margin-left: 258px;
+        height: 90%;
+    }
+
+    .div-git span{
+        margin-top: 27px;
+        margin-left: 14px;
+        font-size: 25px;
+        color: #a02411;
+    }
+
+    .div-projetos{
+        height: 600px;
+        width: 700px;
+    }
+
+    .div-projetos p{
+        font-size: 27px;
+    }
 }
 
 /* >>>>>>>>>>>>>>>>PROJETOS.html<<<<<<<<<<<<<<<<<<<< */
@@ -298,11 +404,9 @@ label #cancel{
 .div-info1{
     height: 260px;
     width: auto;
-
     display: flex;
     overflow: hidden;
     background-color: #48a7a6;
-
 }
 
 .div-info1 img{
@@ -310,16 +414,14 @@ label #cancel{
 }
 
 .div-info1 p{
-    position: absolute;
     font-size: 20px;
-    margin-left: 270px;
+    margin-left: 15px;
     color: #ffffff;
 }
 
 .div-info2{
     height: 260px;
     width: auto;
-
     display: flex;
     overflow: hidden;
     background-color: #398c89;
@@ -333,20 +435,17 @@ label #cancel{
 }
 
 .div-info2 p{
-    position: absolute;
     font-size: 20px;
-    margin-left: 270px;
+    margin-left: 15px;
     color: #ffffff;
 }
 
 .div-info3{
     height: 260px;
     width: auto;
-
     display: flex;
     overflow: hidden;
     background-color: #266563;
-
 }
 
 .div-info3 img{
@@ -356,18 +455,64 @@ label #cancel{
 }
 
 .div-info3 p{
-    position: absolute;
     font-size: 20px;
-    margin-left: 270px;
+    margin-left: 15px;
     color: #ffffff;
+}
+
+@media screen and (max-width: 768px){
+    .div-info1{
+        height: 256px;
+        overflow: hidden;
+    }
+    
+    .div-info1 img{
+        height: 256px; 
+        width: 200px;
+    }
+
+    .div-info1 p{
+        font-size: 18px;
+        margin-left: 15px;
+    }
+    
+    .div-info2{
+        height: 256px;
+        overflow: hidden;
+    }
+    
+    .div-info2 img{
+        width: 200px;
+    }
+
+    .div-info2 p{
+        font-size: 18px;
+        margin-left: 15px;
+    }
+
+    .div-info3{
+        display: flex;
+        height: 256;
+        overflow: hidden;
+    }
+
+    .div-info3 img{
+        height: 200px;
+        margin-top: 38px;
+    }
+    
+    .div-info3 p{
+        font-size: 16.2px;
+        margin-left: 15px;
+    }
 }
 /* >>>>>>>>>>>>>>>>INFORMACOESEDUCACIONAIS.html<<<<<<<<<<<<<<<<<<<< */
 
 
 /* >>>>>>>>>>>>>>>>INTERESSES.html<<<<<<<<<<<<<<<<<<<< */
 .h1-interesses{
-    display: flex;
     position: absolute;
+    display: flex;
     margin-left: 580px;
     margin-top: 24px;
     font-size: 90px;
@@ -385,19 +530,27 @@ label #cancel{
 }
 
 .div-pokemonheader{
+    position: relative;
     display: flex;
     width: auto;
     height: 100px;
 }
 
 .div-pokemonheader img{
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    height: 165px;
-    display: flex;
+    height: 160px;
+    display: inline-block;
 
 }
+
+.div-pokemonheader img#starly-img{
+    margin-left: 400px;
+}
+
+.div-pokemonheader img#seedot-img{
+    margin-left: 400px;
+    transform: scaleX(-1);
+}
+
 
 .cor1{
     color: #ff0000;
@@ -417,15 +570,16 @@ label #cancel{
     margin-right: auto;
     height: 550px;
     width: 720px;
+    box-shadow: 1px 5px 20px 10px #0c4746;
 }
 
 .div-pokemon p{
-    font-size: 23px;
+    font-size: 22px;
+    font-weight: bolder;
     padding-top: 15px;
     margin-left: 310px;
     margin-right: 10px;
     text-align: center;
-
 }
 
 .span-garry{
@@ -433,7 +587,6 @@ label #cancel{
     position: absolute;
     height: 195px;
     margin-top: 80px;
-
 }
 
 .span-squirtle{
@@ -487,7 +640,6 @@ label #cancel{
 }
 
 .idiomas{
-    display: flex;
     border-radius: 20px;
     width: 900px;
     height: 230px;
@@ -495,18 +647,79 @@ label #cancel{
     margin-right: auto;
     margin-top: 30px;
     background-color: #DB877F;
+    box-shadow: 1px 5px 20px 10px #0c4746;
+    overflow: hidden;
 }
 
 .idiomas p{
-    display: flex;
     font-size: 20px;
     font-weight: bolder;
     text-align: center;
-    margin-right: 350px;
-    position: absolute;
 }
 
+@media screen and (max-width: 768px){
+    .h1-interesses{
+        position: absolute;
+        margin-left: 370px;
+        margin-top: 80px;
+        transform: translate(-50%, -50%);
+        font-size: 70px;
+    }
 
+    .div-pokemonheader img{
+        height: 160px;
+        display: inline-block;
+
+    }
+
+    .div-pokemonheader img#starly-img{
+        margin-left: 100px;
+    }
+
+    .div-pokemonheader img#seedot-img{
+        margin-left: 215px;
+        transform: scaleX(-1);
+    }
+
+    .div-pokemon{
+        height: 480px;
+        width: 700px;
+    }
+
+    .div-pokemon p{
+        font-size: 20.17px;
+        padding-top: 11px;
+    }
+
+    .span-garry{
+        height: 180px;
+        margin-left: 8px;
+        margin-top: 80px;
+    }
+    
+    .span-squirtle{
+        height: 70px;
+        margin-left: 200px;
+        margin-top: 187px;
+    }
+
+    .pokebola{
+        width: 280px;
+        height: 280px;
+        margin-top: 5px;
+        margin-left: 10px;
+        overflow: hidden;
+    }
+
+    .idiomas{
+        width: 705px;
+        height: 250px;
+    }
+
+    .idiomas p{
+        font-size: 20px;
+    }
+}
 /* >>>>>>>>>>>>>>>>INTERESSES.html<<<<<<<<<<<<<<<<<<<< */
 
 
