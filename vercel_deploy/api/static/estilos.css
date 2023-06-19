@@ -154,6 +154,47 @@ label #cancel{
 
 }
 
+@media screen and (max-width: 480px) {
+    label #btn,
+    label #cancel {
+        margin: 10px;
+        height: 45px;
+        width: 40px;
+    }
+
+    #check:checked ~ label #btn {
+        margin-left: 83%;
+    }
+
+    #check:checked ~ label #cancel {
+        margin-left: 83%;
+    }
+
+    .sidebar {
+        height: auto;
+        width: 80%;
+        left: -100%;
+        transition: all .5s ease;
+    }
+
+    .sidebar h2 {
+        font-size: 150%;
+    }
+
+    .sidebar a {
+        font-size: 16px;
+        box-sizing: border-box;
+    }
+
+    .divlinks {
+        width: 100%;
+        font-size: 14px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+}
+
 /* >>>>>>>>>>>>>>>>BASE.html<<<<<<<<<<<<<<<<<<<< */
 
 
@@ -231,7 +272,7 @@ label #cancel{
     left: 840px;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 768px) {
     .headerhome {
         height: 200px;
         width: 100%;
@@ -290,6 +331,60 @@ label #cancel{
     }
 }
 
+@media screen and (max-width: 480px) {
+    .headerhome {
+        height: 150px;
+        width: 100%;
+    }
+
+    .headerhome span {
+        margin-top: 5px;
+        margin-left: 63px;
+        font-size: 16px;
+        position: absolute;
+    }
+
+    .headerhome span strong {
+        font-size: 160%;
+    }
+
+    #img {
+        opacity: 1;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+        overflow: hidden;
+        display: flex;
+    }
+
+    .links {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        margin: 40px;
+    }
+
+    .links a {
+        flex-direction: column;
+        margin: -100px;
+        margin-top: 120px;
+        width: 220px;
+    }
+
+    .link-central {
+        position: relative;
+        top: -240px;
+        left: 0px;
+        font-size: 40px;
+    }
+
+    .link-interesses {
+        position: relative;
+        left: 0px;
+        font-size: 40px;
+    }
+}
 
 
 /* >>>>>>>>>>>>>>>>HOME.html<<<<<<<<<<<<<<<<<<<< */
@@ -394,6 +489,40 @@ label #cancel{
 
     .div-projetos p{
         font-size: 27px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .div-git {
+        height: 90px;
+        width: 280px;
+    }
+
+    .div-git img {
+        margin-top: 5px;
+        margin-left: 190px;
+        height: 80%;
+    }
+
+    .div-git span {
+        margin-top: 20px;
+        margin-left: 30px;
+        font-size: 15px;
+        color: #a02411;
+    }
+
+    .div-projetos {
+        height: 500px;
+        width: 340px;
+    }
+
+    .div-projetos h3{
+        font-weight: 900;
+        font-size: 45px;
+    }
+
+    .div-projetos p {
+        font-size: 18px;
     }
 }
 
@@ -506,6 +635,54 @@ label #cancel{
         margin-left: 15px;
     }
 }
+
+@media screen and (max-width: 480px) {
+    .div-info1 {
+        height: 200px;
+        overflow: hidden;
+    }
+    
+    .div-info1 img {
+        height: 200px;
+        width: 132px;
+    }
+
+    .div-info1 p {
+        font-size: 12px;
+        margin-left: 10px;
+    }
+    
+    .div-info2 {
+        height: 200px;
+        overflow: hidden;
+    }
+    
+    .div-info2 img {
+        width: 132px;
+    }
+
+    .div-info2 p {
+        font-size: 12px;
+        margin-left: 10px;
+    }
+
+    .div-info3 {
+        display: flex;
+        height: 240px;
+        overflow: hidden;
+    }
+
+    .div-info3 img {
+        height: 132px;
+        margin-top: 59px;
+    }
+    
+    .div-info3 p {
+        font-size: 12px;
+        margin-left: 10px;
+    }
+}
+
 /* >>>>>>>>>>>>>>>>INFORMACOESEDUCACIONAIS.html<<<<<<<<<<<<<<<<<<<< */
 
 
@@ -718,6 +895,72 @@ label #cancel{
 
     .idiomas p{
         font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .h1-interesses {
+        position: absolute;
+        margin-left: 180px;
+        margin-top: 90px;
+        transform: translate(-50%, -50%);
+        font-size: 40px;
+    }
+
+    .div-pokemonheader img {
+        margin-top: 40px;
+        height: 100px;
+        display: inline-block;
+    }
+
+    .div-pokemonheader img#starly-img {
+        margin-left: 25px;
+    }
+
+    .div-pokemonheader img#seedot-img {
+        margin-left: 110px;
+        transform: scaleX(-1);
+    }
+
+    .div-pokemon {
+        height: 340px;
+        width: 320px;
+    }
+
+    .div-pokemon p{
+        font-size: 10px;
+        padding-top: 160px;
+        margin-left: 10px;
+        text-align: center;
+    }
+
+    .span-garry {
+        height: 90px;
+        margin-left: 4px;
+        margin-top: 40px;
+    }
+
+    .span-squirtle {
+        height: 35px;
+        margin-left: 100px;
+        margin-top: 93px;
+    }
+
+    .pokebola {
+        width: 140px;
+        height: 140px;
+        margin-top: 2px;
+        margin-left: 5px;
+        overflow: hidden;
+    }
+
+    .idiomas {
+        width: 320px;
+        height: 220px;
+    }
+
+    .idiomas p {
+        font-size: 12px;
     }
 }
 /* >>>>>>>>>>>>>>>>INTERESSES.html<<<<<<<<<<<<<<<<<<<< */
